@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:local="clr-namespace:WpfApplication1"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{dxmvvm:ViewModelSource Type=local:SampleGalleryViewModel}">
+    <dxb:ToolBarControl BarItemDisplayMode="ContentAndGlyph">
+        <dxb:BarSplitButtonItem Content="Open Dropdown Gallery" Glyph="{dx:DXImage Image=Open_16x16.png}">
+            <dxb:BarSplitButtonItem.PopupControl>
+                <dxr:GalleryDropDownPopupMenu>
+                    <dxr:GalleryDropDownPopupMenu.Gallery>
+                        <dxb:Gallery GroupsSource="{Binding Groups}">
+                            <dxb:Gallery.GroupTemplate>
+                                <DataTemplate>
+                                    <ContentControl>
+                                        <dxb:GalleryItemGroup Caption="{Binding Caption}" ItemsSource="{Binding Items}">
+                                            <dxb:GalleryItemGroup.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ContentControl>
+                                                        <dxb:GalleryItem Caption="{Binding Caption}" />
+                                                    </ContentControl>
+                                                </DataTemplate>
+                                            </dxb:GalleryItemGroup.ItemTemplate>
+                                        </dxb:GalleryItemGroup>
+                                    </ContentControl>
+                                </DataTemplate>
+                            </dxb:Gallery.GroupTemplate>
+                        </dxb:Gallery>
+                    </dxr:GalleryDropDownPopupMenu.Gallery>
+                </dxr:GalleryDropDownPopupMenu>
+            </dxb:BarSplitButtonItem.PopupControl>
+        </dxb:BarSplitButtonItem>
+    </dxb:ToolBarControl>
+</Window>
