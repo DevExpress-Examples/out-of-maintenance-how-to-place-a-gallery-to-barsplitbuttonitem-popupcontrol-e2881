@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * **[MainWindow.xaml](./CS/WpfApplication1/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfApplication1/MainWindow.xaml))**
-* [MainWindow.xaml.cs](./CS/WpfApplication1/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/WpfApplication1/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/WpfApplication1/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfApplication1/MainWindow.xaml.vb))
 * [SampleGalleryViewModel.cs](./CS/WpfApplication1/SampleGalleryViewModel.cs) (VB: [SampleGalleryViewModel.vb](./VB/WpfApplication1/SampleGalleryViewModel.vb))
 <!-- default file list end -->
 # How to place a gallery to BarSplitButtonItem PopupControl 
